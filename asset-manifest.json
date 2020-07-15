@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/swift-summaries/static/css/main.587e3131.chunk.css",
+    "main.js": "/swift-summaries/static/js/main.af8e8bdd.chunk.js",
+    "main.js.map": "/swift-summaries/static/js/main.af8e8bdd.chunk.js.map",
+    "runtime-main.js": "/swift-summaries/static/js/runtime-main.7571ef90.js",
+    "runtime-main.js.map": "/swift-summaries/static/js/runtime-main.7571ef90.js.map",
+    "static/js/2.4c5d587a.chunk.js": "/swift-summaries/static/js/2.4c5d587a.chunk.js",
+    "static/js/2.4c5d587a.chunk.js.map": "/swift-summaries/static/js/2.4c5d587a.chunk.js.map",
+    "index.html": "/swift-summaries/index.html",
+    "precache-manifest.a20616de563b57bbbb75593176d01a37.js": "/swift-summaries/precache-manifest.a20616de563b57bbbb75593176d01a37.js",
+    "service-worker.js": "/swift-summaries/service-worker.js",
+    "static/css/main.587e3131.chunk.css.map": "/swift-summaries/static/css/main.587e3131.chunk.css.map",
+    "static/js/2.4c5d587a.chunk.js.LICENSE.txt": "/swift-summaries/static/js/2.4c5d587a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7571ef90.js",
+    "static/js/2.4c5d587a.chunk.js",
+    "static/css/main.587e3131.chunk.css",
+    "static/js/main.af8e8bdd.chunk.js"
+  ]
+}
