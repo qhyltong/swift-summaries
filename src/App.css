@@ -8,19 +8,35 @@ div h1 {
   padding-left: 25px;
   margin-top: 0;
   color: #f76a05;
-  line-height: 50px;
+  line-height: 1.8em;
   background-color: #020330;
-  height: 15%;
+  height: 2em;
 }
 
-#text-label {
-  font-size: 30px;
-  font-weight: lighter;
+h2 {
+  margin-left: 5%;
   margin-bottom: 10px;
+  display: inline;
+  font-weight: lighter;
+  color: #f76a05;
+}
+
+#summary-header {
+  margin: 0;
 }
 
 .dropdown a {
   display: block;
+}
+
+p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border-color: #f76a05;
+  border: 2px #f76a05 solid;
 }
 
 .select-selected {
@@ -33,19 +49,22 @@ div h1 {
 
 .select-selected {
   background-color: #f76a05;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 8px;
   color: white;
+  text-align: center;
   position: relative;
   font-family: arial;
 }
 
 #submit {
-  padding: 10px;
+  padding: 15px;
   border: none;
   margin-top: 10px;
   margin-left: 10px;
   background-color: #f76a05;
   color: white;
+  border-radius: 8px;
   display: inline-block;
 }
 
@@ -64,11 +83,31 @@ div h1 {
   margin-left: 5%;
 }
 
+.form-div {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  height: 100vh;
+}
+
+.output {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: right;
+  display: inline-block;
+  width: 45%;
+}
+
 div textarea {
   font-size: 15px;
+  font-family: arial;
+  overflow: hidden;
+  border-radius: 8px;
+  border-style: none;
   font: arial;
   resize: none;
-  height: 150px;
+  height: 50vh;
   padding: 10px 10px;
-  width: 45%;
+  margin-top: 10px;
+  width: 95%;
 }

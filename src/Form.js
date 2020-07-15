@@ -13,8 +13,9 @@ function Form(props) {
     props.changeText(currentText);
   }
   return(
+    <div className="form-div">
+      <h2>Enter Text Here</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <label id="text-label">Enter Text Here</label><br/>
         <textarea onChange={handleChange}></textarea><br/>
         <div className="submission-button-area">
           <select className="select-selected" name="size">
@@ -26,6 +27,7 @@ function Form(props) {
           <input id="submit" type="submit" value="Submit"/>
         </div>
       </form>
+    </div>
   );
 }
 

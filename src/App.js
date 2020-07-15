@@ -10,13 +10,19 @@ function App(props) {
   };
 
   const [inputText, resetText] = useState(null);
+  if(inputText) {
+    return(
+      <body>
+        <h1>Swift Summaries</h1>
+        <Form changeText={changeText}/>
+        <Output outputText={inputText}/>
+       </body>
+    );
+  }
   return(
     <body>
-    <div className="submission">
       <h1>Swift Summaries</h1>
       <Form changeText={changeText}/>
-      <Output outputText={inputText}/>
-    </div>
     </body>
   );
 }

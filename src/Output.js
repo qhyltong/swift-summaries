@@ -4,7 +4,10 @@ import './App.css';
 function Output(props) {
 
   return(
-    <p>{props.outputText}</p>
+    <div className="output">
+      <h2 id="summary-header">Text Summary</h2>
+      <p>{props.outputText}</p>
+    </div>
   );
 }
 
