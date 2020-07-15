@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  background-color: #edeef2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div h1 {
+  text-align: left;
+  font-weight: normal;
+  padding-left: 25px;
+  margin-top: 0;
+  color: #f76a05;
+  line-height: 50px;
+  background-color: #020330;
+  height: 15%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#text-label {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dropdown a {
+  display: block;
+}
+
+.select-selected {
+  background-color: blue;
+}
+
+.drop-button {
+  display: inline-block;
+}
+
+.select-selected {
+  background-color: #f76a05;
+  padding: 10px;
   color: white;
+  position: relative;
+  font-family: arial;
 }
 
-.App-link {
-  color: #61dafb;
+#submit {
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #f76a05;
+  color: white;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submission-button-area {
+  margin-top: 10px;
+}
+
+.drop-items {
+  margin: 0px;
+  text-decoration: none;
+  color: #d8d8e6;
+}
+
+.form {
+  color:  #f76a05;
+  margin-left: 5%;
+}
+
+div textarea {
+  font-size: 15px;
+  font: arial;
+  resize: none;
+  height: 150px;
+  padding: 10px 10px;
+  width: 45%;
 }
