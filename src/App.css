@@ -1,5 +1,5 @@
 body {
-  background-color: #edeef2;
+  background-color: #f7f1df;
 }
 
 div h1 {
@@ -7,10 +7,36 @@ div h1 {
   font-weight: normal;
   padding-left: 25px;
   margin-top: 0;
-  color: #f76a05;
+  color: #d9c282;
   line-height: 1.8em;
-  background-color: #020330;
+  background: black;
   height: 2em;
+  display: inline;
+}
+
+#nav {
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+#info-button {
+  display: inline;
+  float: right;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  margin-top: 0;
+  color: #d9c282;
+  line-height: 1.8em;
+  text-align: center;
+  font-size: 1.3em;
+  height: 2.4em;
+  padding: 8px 25px 8px;
+  padding-bottom: 0;
+}
+
+#info-button:hover {
+  
 }
 
 h2 {
@@ -18,7 +44,8 @@ h2 {
   margin-bottom: 10px;
   display: inline;
   font-weight: lighter;
-  color: #f76a05;
+  color: black;
+  text-shadow: 1px 1px #d9c282;
 }
 
 #summary-header {
@@ -35,8 +62,8 @@ p {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 8px;
-  border-color: #f76a05;
-  border: 2px #f76a05 solid;
+  line-height: 1.6;
+  border: 2px #d9c282 solid;
 }
 
 .select-selected {
@@ -48,10 +75,10 @@ p {
 }
 
 .select-selected {
-  background-color: #f76a05;
+  background-color: black;
   padding: 15px;
   border-radius: 8px;
-  color: white;
+  color: #d9c282;
   text-align: center;
   position: relative;
   font-family: arial;
@@ -62,8 +89,8 @@ p {
   border: none;
   margin-top: 10px;
   margin-left: 10px;
-  background-color: #f76a05;
-  color: white;
+  background-color: black;
+  color: #d9c282;
   border-radius: 8px;
   display: inline-block;
 }
@@ -75,11 +102,10 @@ p {
 .drop-items {
   margin: 0px;
   text-decoration: none;
-  color: #d8d8e6;
+  color: #d9c282;
 }
 
 .form {
-  color:  #f76a05;
   margin-left: 5%;
 }
 
@@ -101,13 +127,13 @@ p {
 div textarea {
   font-size: 15px;
   font-family: arial;
-  overflow: hidden;
   border-radius: 8px;
-  border-style: none;
+  border-style: black;
   font: arial;
   resize: none;
   height: 50vh;
   padding: 10px 10px;
   margin-top: 10px;
   width: 95%;
+  line-height: 1.6;
 }

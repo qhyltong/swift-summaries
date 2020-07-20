@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Form from './Form';
 import Output from './Output';
+import NavBar from './NavBar';
 
 function App(props) {
 
@@ -13,7 +14,7 @@ function App(props) {
   if(inputText) {
     return(
       <body>
-        <h1>Swift Summaries</h1>
+        <NavBar />
         <Form changeText={changeText}/>
         <Output outputText={inputText}/>
        </body>
@@ -21,7 +22,7 @@ function App(props) {
   }
   return(
     <body>
-      <h1>Swift Summaries</h1>
+      <NavBar />
       <Form changeText={changeText}/>
     </body>
   );
