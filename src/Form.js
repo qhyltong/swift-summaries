@@ -24,6 +24,7 @@ function Form(props) {
             <option value="50">50%</option>
             <option value="75">75%</option>
           </select>
+          <input id="resetText" type="reset" value="Clear"/>
           <input id="submit" type="submit" value="Submit"/>
         </div>
       </form>
