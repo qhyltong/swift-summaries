@@ -39,7 +39,11 @@ class App extends React.Component {
             changeSelection={this.changeSelection}
             changeLoadingStatus={this.changeLoadingStatus}
           />
-          <Output isLoading={this.state.isLoading} outputText={this.state.inputText}/>
+          <Output
+            isLoading={this.state.isLoading}
+            outputText={this.state.inputText}
+            changeLoadingStatus={this.changeLoadingStatus}
+          />
          </body>
       );
     }

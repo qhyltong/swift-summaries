@@ -189,6 +189,15 @@ option {
   width: 45%;
 }
 
+.loading {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: right;
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+
 div textarea {
   font-size: 15px;
   font-family: arial;

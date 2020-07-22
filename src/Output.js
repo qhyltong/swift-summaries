@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 
 function Output(props) {
+
+  useEffect(() => {
+    props.changeLoadingStatus(true);
+  });
+
   if(props.isLoading) {
     return(
       <div className="loading">
