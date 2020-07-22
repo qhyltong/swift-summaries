@@ -1,31 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Form from './Form';
 import Output from './Output';
 import NavBar from './NavBar';
 
-function App(props) {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputText: null
+    }
+    this.changeText = this.changeText.bind(this);
+  }
 
-  function changeText(text) {
-    resetText(text);
+  changeText(text) {
+    this.setState({inputText: text});
   };
 
-  const [inputText, resetText] = useState(null);
-  if(inputText) {
+  render() {
+    if(this.state.inputText) {
+      return(
+        <body>
+          <NavBar />
+          <Form changeText={this.changeText}/>
+          <Output outputText={this.state.inputText}/>
+         </body>
+      );
+    }
     return(
       <body>
         <NavBar />
-        <Form changeText={changeText}/>
-        <Output outputText={inputText}/>
-       </body>
+        <Form changeText={this.changeText}/>
+      </body>
     );
   }
-  return(
-    <body>
-      <NavBar />
-      <Form changeText={changeText}/>
-    </body>
-  );
 }
 
 export default App;
