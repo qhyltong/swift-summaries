@@ -88,10 +88,6 @@ p {
   border: 2px #d9c282 solid;
 }
 
-.select-selected {
-  background-color: blue;
-}
-
 .drop-button {
   display: inline-block;
 }
@@ -104,6 +100,18 @@ p {
   text-align: center;
   position: relative;
   font-family: arial;
+  border: black solid 1px;
+  font-weight: bolder;
+}
+
+.select-selected:hover {
+  background-color: #d9c282;
+  color: black;
+}
+
+option {
+  background-color: black;
+  color: white;
 }
 
 #submit {
@@ -113,8 +121,20 @@ p {
   margin-left: 10px;
   background-color: black;
   color: #d9c282;
+  font-weight: bolder;
   border-radius: 8px;
   display: inline-block;
+  box-shadow: 0 3px black;
+  border: black solid 1px;
+}
+
+#submit:hover {
+  background-color: #d9c282;
+  color: black;
+}
+
+#submit:active {
+  box-shadow: none;
 }
 
 #resetText {
@@ -126,6 +146,18 @@ p {
   color: #d9c282;
   border-radius: 8px;
   display: inline-block;
+  box-shadow: 0 3px black;
+  border: black solid 1px;
+  font-weight: bolder;
+}
+
+#resetText:hover {
+  background-color: #d9c282;
+  color: black;
+}
+
+#resetText:active {
+  box-shadow: none;
 }
 
 .submission-button-area {
