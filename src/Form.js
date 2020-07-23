@@ -19,6 +19,12 @@ function Form(props) {
     props.changeText(currentText);
     props.changeSelection(summarySize);
   }
+
+  function handleReset(event) {
+    props.changeText(null);
+    changeSize(null);
+  }
+
   return(
     <div className="form-div">
       <h2>Enter Text Here</h2>
@@ -31,7 +37,7 @@ function Form(props) {
             <option value="50">50%</option>
             <option value="75">75%</option>
           </select>
-          <input id="resetText" type="reset" value="Clear"/>
+          <input id="resetText" onClick={handleReset} type="reset" value="Reset"/>
           <input id="submit" type="submit" value="Submit"/>
         </div>
       </form>

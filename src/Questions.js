@@ -24,7 +24,7 @@ function Questions(props) {
     return(
       <div className="questions">
         <h2>Comprehension Questions</h2>
-        <form onSubmit={(event) => handleSubmit(event, questionText)} className="form">
+        <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
           <button
             id="names-button"
             className="question-buttons"
@@ -32,24 +32,25 @@ function Questions(props) {
             What names are mentioned?
           </button>
           <button
-            id="names-button"
+            id="locations-button"
             className="question-buttons"
             onClick={(event) => questionChange(event, "locations")}>
             What locations are mentioned?
           </button><br/>
-          <input type="text" onChange={handleChange} id="question-box"/>
+          <input type="text" placeholder="Enter Question..." onChange={handleChange} id="question-box"/>
           <input type="submit" value="Submit" id="question-submit"/>
+          <h3>Answer</h3>
+          <div id="answers">
+            <p>{question}</p>
+          </div>
         </form>
-        <div>
-          {question}
-        </div>
       </div>
     );
   }
   return(
     <div className="questions">
       <h2>Comprehension Questions</h2>
-      <form onSubmit={(event) => handleSubmit(event, questionText)} className="form">
+      <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
         <button
           id="names-button"
           className="question-buttons"
@@ -62,7 +63,7 @@ function Questions(props) {
           onClick={(event) => questionChange(event, "location")}>
           What locations are mentioned?
         </button><br/>
-        <input type="text" onChange={handleChange} id="question-box"/>
+        <input type="text" placeholder="Enter Question..." onChange={handleChange} id="question-box"/>
         <input type="submit" value="Submit" id="question-submit"/>
       </form>
     </div>

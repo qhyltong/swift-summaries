@@ -62,8 +62,15 @@ div h1 {
 }
 
 h2 {
-  margin-left: 5%;
   margin-bottom: 10px;
+  display: inline;
+  font-weight: lighter;
+  color: black;
+  text-shadow: 1px 1px #d9c282;
+}
+
+h3 {
+  margin-top: 30px;
   display: inline;
   font-weight: lighter;
   color: black;
@@ -100,7 +107,6 @@ p {
   text-align: center;
   position: relative;
   font-family: arial;
-  border: black solid 1px;
   font-weight: bolder;
 }
 
@@ -122,14 +128,15 @@ option {
   background-color: black;
   color: #d9c282;
   font-weight: bolder;
-  border-radius: 8px;
+  border-radius: 30px;
   display: inline-block;
-  box-shadow: 0 3px black;
   border: black solid 1px;
 }
 
 #submit:hover {
   background-color: #d9c282;
+  border: none;
+  box-shadow: 0 2px black;
   color: black;
 }
 
@@ -144,15 +151,16 @@ option {
   margin-left: 10px;
   background-color: black;
   color: #d9c282;
-  border-radius: 8px;
+  border-radius: 30px;
   display: inline-block;
-  box-shadow: 0 3px black;
   border: black solid 1px;
   font-weight: bolder;
 }
 
 #resetText:hover {
   background-color: #d9c282;
+  border: none;
+  box-shadow: 0 2px black;
   color: black;
 }
 
@@ -170,33 +178,38 @@ option {
   color: #d9c282;
 }
 
-.form {
+.question-form {
   margin-left: 5%;
+  padding-right: 10px;
+  padding-bottom: 15px;
 }
 
 .left {
   float: left;
   display: inline-block;
-  width: 50%;
+  margin-left: 3.33%;
+  margin-right: 1.66%;
+  width: 45%;
   height: 100vh;
 }
 
 .right {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin-left: 1.66%;
+  margin-right: 3.33%;
   float: right;
   display: inline-block;
   width: 45%;
 }
 
 .questions {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .question-buttons {
   margin: 10px;
   margin-left: 0;
   margin-top: 10px;
+  margin-bottom: 5px;
   padding: 10px;
   border: none;
   background-color: black;
@@ -204,13 +217,70 @@ option {
   font-weight: bolder;
   border-radius: 30px;
   display: inline-block;
-  box-shadow: 0 3px black;
   border: black solid 1px;
 }
 
+
+.question-buttons:hover {
+  background-color: #d9c282;
+  border: none;
+  box-shadow: 0 2px black;
+  color: black;
+}
+
+.questions-buttons:active {
+  box-shadow: none;
+}
+
+
+
+.question-form {
+  margin: 0;
+}
+
+#question-box {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-family: arial;
+  border-style: black;
+  font: arial;
+  height: 15px;
+  resize: none;
+  padding: 10px 10px;
+  width: 65%;
+  line-height: 1.6;
+}
+
+#question-submit {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: #d9c282;
+  font-weight: bolder;
+  border-radius: 30px;
+  display: inline-block;
+  border: black solid 1px;
+}
+
+#question-submit:hover {
+  background-color: #d9c282;
+  border: none;
+  box-shadow: 0 2px black;
+  color: black;
+}
+
+#question-submit:active {
+  box-shadow: none;
+}
+
 .loading {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin-left: 1.66%;
+  margin-right: 3.33%;
   float: right;
   display: inline-block;
   width: 45%;
