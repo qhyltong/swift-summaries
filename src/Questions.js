@@ -38,7 +38,7 @@ function Questions(props) {
             What locations are mentioned?
           </button><br/>
           <input type="text" placeholder="Enter Question..." onChange={handleChange} id="question-box"/>
-          <input type="submit" value="Submit" id="question-submit"/>
+          <input type="submit" value="Submit" id="question-submit"/><br/>
           <h3>Answer</h3>
           <div id="answers">
             <p>{question}</p>
