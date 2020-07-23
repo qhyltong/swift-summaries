@@ -174,19 +174,38 @@ option {
   margin-left: 5%;
 }
 
-.form-div {
+.left {
   float: left;
   display: inline-block;
   width: 50%;
   height: 100vh;
 }
 
-.output {
+.right {
   margin-left: 2.5%;
   margin-right: 2.5%;
   float: right;
   display: inline-block;
   width: 45%;
+}
+
+.questions {
+  margin-top: 20px;
+}
+
+.question-buttons {
+  margin: 10px;
+  margin-left: 0;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: #d9c282;
+  font-weight: bolder;
+  border-radius: 30px;
+  display: inline-block;
+  box-shadow: 0 3px black;
+  border: black solid 1px;
 }
 
 .loading {

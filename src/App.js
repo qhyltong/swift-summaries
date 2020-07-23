@@ -3,6 +3,7 @@ import './App.css';
 import Form from './Form';
 import Output from './Output';
 import NavBar from './NavBar';
+import Questions from './Questions';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,27 +35,34 @@ class App extends React.Component {
       return(
         <body>
           <NavBar />
-          <Form
-            changeText={this.changeText}
-            changeSelection={this.changeSelection}
-            changeLoadingStatus={this.changeLoadingStatus}
-          />
-          <Output
-            isLoading={this.state.isLoading}
-            outputText={this.state.inputText}
-            changeLoadingStatus={this.changeLoadingStatus}
-          />
-         </body>
+          <div className="left">
+            <Form
+              changeText={this.changeText}
+              changeSelection={this.changeSelection}
+              changeLoadingStatus={this.changeLoadingStatus}
+            />
+          <Questions inputText={this.state.inputText} />
+          </div>
+          <div className="right">
+            <Output
+              isLoading={this.state.isLoading}
+              outputText={this.state.inputText}
+              changeLoadingStatus={this.changeLoadingStatus}
+            />
+          </div>
+        </body>
       );
     }
     return(
       <body>
         <NavBar />
-        <Form
-          changeText={this.changeText}
-          changeSelection={this.changeSelection}
-          changeLoadingStatus={this.changeLoadingStatus}
-        />
+        <div className="left">
+          <Form
+            changeText={this.changeText}
+            changeSelection={this.changeSelection}
+            changeLoadingStatus={this.changeLoadingStatus}
+          />
+        </div>
       </body>
     );
   }
