@@ -16,6 +16,7 @@ class App extends React.Component {
       inputText: null,
       summarySize: 50,
       isLoading: false,
+      keyPhraseOutput: null
     }
   }
 
