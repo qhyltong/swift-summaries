@@ -81,6 +81,12 @@ h3 {
   margin: 0;
 }
 
+#summary-p {
+  height: 60vh;
+  margin-bottom: 50px;
+  overflow-y: auto;
+}
+
 .dropdown a {
   display: block;
 }
@@ -202,7 +208,7 @@ option {
 }
 
 .questions {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .question-buttons {
@@ -276,6 +282,64 @@ option {
 
 #question-submit:active {
   box-shadow: none;
+}
+
+.key-phrases {
+  margin-top: 20px;
+}
+
+#phrase-buttons {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.not-selected-button {
+  background-color: #d9c282;
+  color: black;
+}
+
+.selected-button {
+  background-color: black;
+  color: #d9c282;
+  box-shadow: 0 2px #d9c282;
+}
+
+#key-phrase-button, #rare-words-button {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: lighter;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#key-phrase-button {
+  width: 50%;
+  border-top-left-radius: 8px;
+}
+
+#keyphrase-p {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+#rare-words-button {
+  width: 50%;
+  border-top-right-radius: 8px;
+}
+
+.phrase-list {
+  margin: 0;
+  width: 75%;
+  display: block;
+  margin-top: 20px;
+  font-size: 1.1em;
+  list-style-type: circle;
+  margin-bottom: 10px;
 }
 
 .loading {

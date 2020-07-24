@@ -4,6 +4,7 @@ import Form from './Form';
 import Output from './Output';
 import NavBar from './NavBar';
 import Questions from './Questions';
+import KeyPhrases from './KeyPhrases';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class App extends React.Component {
               outputText={this.state.inputText}
               changeLoadingStatus={this.changeLoadingStatus}
             />
+            <KeyPhrases />
           </div>
         </body>
       );
