@@ -35,7 +35,7 @@ function KeyPhrases(props) {
             </a>
           </div>
           <ol className="phrase-list">
-            <li>Key Phrase 1</li>
+            <li>{props.output}</li>
             <li>Key Phrase 2</li>
             <li>Key Phrase 3</li>
             <li>Key Phrase 4</li>

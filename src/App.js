@@ -51,7 +51,7 @@ class App extends React.Component {
               outputText={this.state.inputText}
               changeLoadingStatus={this.changeLoadingStatus}
             />
-            <KeyPhrases />
+          <KeyPhrases output={this.state.keyPhraseOutput}/>
           </div>
         </body>
       );
