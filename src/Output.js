@@ -5,7 +5,7 @@ function Output(props) {
 
   if(props.isLoading) {
     return(
-      <div className="loading">
+      <div className="output">
         Loading..
       </div>
     );

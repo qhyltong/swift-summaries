@@ -49,7 +49,6 @@ class App extends React.Component {
             <Output
               isLoading={this.state.isLoading}
               outputText={this.state.inputText}
-              changeLoadingStatus={this.changeLoadingStatus}
             />
           <KeyPhrases output={this.state.keyPhraseOutput}/>
           </div>
