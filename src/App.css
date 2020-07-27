@@ -14,6 +14,10 @@ div h1 {
   display: inline;
 }
 
+input[type="file"] {
+  display: none;
+}
+
 #nav {
   background-color: black;
   margin-bottom: 20px;
@@ -107,7 +111,7 @@ p {
 
 .select-selected {
   background-color: black;
-  padding: 15px;
+  padding: 10px;
   border-radius: 8px;
   color: #d9c282;
   text-align: center;
@@ -119,6 +123,20 @@ p {
 .select-selected:hover {
   background-color: #d9c282;
   color: black;
+}
+
+.custom-file-upload {
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  background-color: black;
+  color: #d9c282;
+  font-weight: bolder;
+  font-size: .7em;
+  border-radius: 8px;
+  display: inline-block;
+  border: black solid 1px;
+  margin-right: 10px;
 }
 
 option {
@@ -135,7 +153,7 @@ option {
   color: #d9c282;
   font-weight: bolder;
   border-radius: 30px;
-  display: inline-block;
+  float: right;
   border: black solid 1px;
 }
 
@@ -151,14 +169,13 @@ option {
 }
 
 #resetText {
-  padding: 15px;
+  padding: 10px;
   border: none;
   margin-top: 10px;
   margin-left: 10px;
   background-color: black;
   color: #d9c282;
-  border-radius: 30px;
-  display: inline-block;
+  border-radius: 8px;
   border: black solid 1px;
   font-weight: bolder;
 }

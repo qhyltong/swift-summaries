@@ -43,14 +43,14 @@ class App extends React.Component {
               changeSelection={this.changeSelection}
               changeLoadingStatus={this.changeLoadingStatus}
             />
-          <Questions inputText={this.state.inputText} />
+            <Questions inputText={this.state.inputText} />
           </div>
           <div className="right">
             <Output
               isLoading={this.state.isLoading}
               outputText={this.state.inputText}
             />
-          <KeyPhrases output={this.state.keyPhraseOutput}/>
+            <KeyPhrases output={this.state.keyPhraseOutput}/>
           </div>
         </body>
       );

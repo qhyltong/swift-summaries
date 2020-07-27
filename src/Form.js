@@ -4,6 +4,7 @@ import './App.css';
 function Form(props) {
   const [currentText, changeCurrent] = useState(null);
   const [summarySize, changeSize] = useState(null);
+  const [inputFile, uploadFile] = useState(null);
 
   function handleChange(event) {
     changeCurrent(event.target.value);
@@ -12,6 +13,11 @@ function Form(props) {
   function handleSelection(event) {
     event.preventDefault();
     changeSize(event.target.value);
+  }
+
+  function handleFileUpload(event) {
+    const files = event.target.files;
+    uploadFile(files[0]);
   }
 
   function handleSubmit(event) {
@@ -31,6 +37,10 @@ function Form(props) {
       <form className="form" onSubmit={handleSubmit}>
         <textarea onChange={handleChange}></textarea><br/>
         <div className="submission-button-area">
+          <label onChange={handleFileUpload} className="custom-file-upload">
+              <input type="file"/>
+              Upload Image
+          </label>
           <select onChange={handleSelection} className="select-selected" name="size">
             <option value="0">Summmary Size</option>
             <option value="25">25%</option>
