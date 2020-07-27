@@ -54,6 +54,25 @@ class App extends React.Component {
           </div>
         </body>
       );
+    } else if(this.state.isLoading) {
+      return(
+        <body>
+          <NavBar />
+          <div className="left">
+            <Form
+              changeText={this.changeText}
+              changeSelection={this.changeSelection}
+              changeLoadingStatus={this.changeLoadingStatus}
+            />
+          </div>
+          <div className="right">
+            <Output
+              isLoading={this.state.isLoading}
+              outputText={this.state.inputText}
+            />
+          </div>
+        </body>
+      );
     }
     return(
       <body>
