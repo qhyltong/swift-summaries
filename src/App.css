@@ -87,7 +87,6 @@ h3 {
 
 #summary-p {
   height: 60vh;
-  margin-bottom: 50px;
   overflow-y: auto;
 }
 
@@ -137,6 +136,13 @@ p {
   display: inline-block;
   border: black solid 1px;
   margin-right: 10px;
+}
+
+.custom-file-upload:hover {
+  background-color: #d9c282;
+  border: none;
+  box-shadow: 0 2px black;
+  color: black;
 }
 
 option {
@@ -193,18 +199,13 @@ option {
 
 .submission-button-area {
   margin-top: 10px;
+  height: 10vh;
 }
 
 .drop-items {
   margin: 0px;
   text-decoration: none;
   color: #d9c282;
-}
-
-.question-form {
-  margin-left: 5%;
-  padding-right: 10px;
-  padding-bottom: 15px;
 }
 
 .left {
@@ -224,7 +225,7 @@ option {
 }
 
 .questions {
-  margin-top: 53px;
+  margin-top: 110px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -260,6 +261,9 @@ option {
 
 .question-form {
   margin: 0;
+  margin-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 15px;
 }
 
 #question-box {
@@ -368,6 +372,19 @@ option {
   display: inline-block;
   width: 45%;
   text-align: center;
+}
+
+.comprehension-questions {
+  border-radius: 8px;
+  font-weight: lighter;
+  color: #d9c282;
+  font-size: 1.5em;
+  text-shadow: none;
+  color: #d9c282;
+  background-color: black;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 div textarea {

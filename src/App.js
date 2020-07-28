@@ -16,7 +16,9 @@ class App extends React.Component {
       inputText: null,
       summarySize: 50,
       isLoading: false,
-      keyPhraseOutput: null
+      keyPhraseOutput: null,
+      keyPhraseItems: null,
+      rareWordsItems: null
     }
   }
 
@@ -26,6 +28,12 @@ class App extends React.Component {
 
   changeText(text) {
     this.setState({inputText: text});
+
+    /* TODO */
+    /*add fetch call for both key phrase and rare words,
+      take fetch calls out of Keyphrases.js, have a .then */
+
+    /*.then(()=> this.setState({keyPhraseItems: [name_of_phrase_var], rareWordsItems: [name of rare word var]}))*/
   };
 
   changeSelection(size) {
@@ -50,7 +58,7 @@ class App extends React.Component {
               isLoading={this.state.isLoading}
               outputText={this.state.inputText}
             />
-            <KeyPhrases output={this.state.keyPhraseOutput}/>
+          <KeyPhrases rareOutput={this.state.rareWordsItems} keyOutput={this.state.keyPhraseItems}/>
           </div>
         </body>
       );

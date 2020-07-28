@@ -35,7 +35,7 @@ function KeyPhrases(props) {
             </a>
           </div>
           <ol className="phrase-list">
-            <li>{props.output}</li>
+            <li>{props.keyOutput}</li>
             <li>Key Phrase 2</li>
             <li>Key Phrase 3</li>
             <li>Key Phrase 4</li>
@@ -64,7 +64,7 @@ function KeyPhrases(props) {
           </a>
         </div>
         <ul className="phrase-list">
-          <li>Rare Word: definition</li>
+          <li>{props.rareOutput}</li>
           <li>Rare Word: definition 2</li>
           <li>Rare Word: definition</li>
           <li>Rare Word: definition</li>

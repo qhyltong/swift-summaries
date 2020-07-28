@@ -23,7 +23,7 @@ function Questions(props) {
   if(question) {
     return(
       <div className="questions">
-        <h2>Comprehension Questions</h2>
+        <p className="comprehension-questions">Comprehension Questions</p>
         <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
           <button
             id="names-button"
@@ -49,7 +49,7 @@ function Questions(props) {
   }
   return(
     <div className="questions">
-      <h2>Comprehension Questions</h2>
+      <h2 className="comprehension-questions">Comprehension Questions</h2>
       <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
         <button
           id="names-button"
