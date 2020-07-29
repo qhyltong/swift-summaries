@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import circle from './circle.gif';
 
 function Output(props) {
 
   if(props.isLoading) {
     return(
       <div className="output">
-        <img src={circle} alt="loading..." />
+        Loading...
       </div>
     );
   }
