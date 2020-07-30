@@ -26,7 +26,7 @@ function KeyPhrases(props) {
   }
 
   let rareWords = null;
-  if(props.rareWords) {
+  if(props.rareOutput) {
     rareWords = props.rareOutput.map(
       (word) => (
         <li key={word}>
@@ -82,9 +82,9 @@ function KeyPhrases(props) {
               Rare Words
           </a>
         </div>
-        <ul className="phrase-list">
+        <ol className="phrase-list">
           {rareWords}
-        </ul>
+        </ol>
       </p>
     </div>
   );
