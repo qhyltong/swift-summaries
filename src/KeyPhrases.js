@@ -13,6 +13,16 @@ function KeyPhrases(props) {
     event.preventDefault();
     changeSection(0);
   }
+  const keyPhrases = null;
+  if(props.keyOutput) {
+    keyPhrases = props.keyOutput.map(
+      (phrase) => (
+        <li key={phrase}>
+          {phrase}
+        </li>
+      )
+    );
+  }
 
   if(sectionChoice === 1) {
     return(
@@ -35,10 +45,7 @@ function KeyPhrases(props) {
             </a>
           </div>
           <ol className="phrase-list">
-            <li>{props.keyOutput}</li>
-            <li>Key Phrase 2</li>
-            <li>Key Phrase 3</li>
-            <li>Key Phrase 4</li>
+            {keyPhrases}
           </ol>
         </p>
       </div>
