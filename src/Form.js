@@ -5,7 +5,6 @@ function Form(props) {
   const [currentText, changeCurrent] = useState(null);
   const [summarySize, changeSize] = useState(null);
   const [inputFile, uploadFile] = useState(null);
-  const [textText, changeTextText] = useState(null);
 
   function handleChange(event) {
     changeCurrent(event.target.value);
@@ -19,9 +18,6 @@ function Form(props) {
   function handleFileUpload(event) {
     const files = event.target.files;
     uploadFile(files[0]);
-
-    //add line below after API call, it might need to be in a .then
-    //changeTextText([var_name of_text]);
   }
 
   function handleSubmit(event) {
@@ -32,14 +28,16 @@ function Form(props) {
 
   function handleReset(event) {
     props.changeText(null);
+    changeCurrent("");
     changeSize(null);
+    document.getElementById("submission-area").value = "";
   }
 
   return(
     <div className="form-div">
       <h2>Enter Text Here</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <textarea value={textText} onChange={handleChange}></textarea><br/>
+        <textarea id="submission-area" value={currentText} onChange={handleChange}></textarea><br/>
         <div className="submission-button-area">
           <label onChange={handleFileUpload} className="custom-file-upload">
               <input type="file"/>

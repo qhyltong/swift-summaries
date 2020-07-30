@@ -2,15 +2,31 @@ body {
   background-color: #f7f1df;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
+#img-div {
+  display: inline-block;
+  position: absolute;
+  align-items: baseline;
+  width: 3.8em;
+  height: 3.5em;
+  top: 0;
+  bottom: 0;
+  line-height: 1.8em;
+}
+
 div h1 {
   text-align: left;
   font-weight: normal;
-  padding-left: 25px;
+  padding-left: 10px;
   margin-top: 0;
+  margin-left: 3.4rem;
   color: #d9c282;
-  line-height: 1.8em;
   background: black;
-  height: 2em;
+  line-height: 1.8em;
   display: inline;
 }
 
@@ -20,7 +36,7 @@ input[type="file"] {
 
 #nav {
   background-color: black;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #info-button {
@@ -225,7 +241,7 @@ option {
 }
 
 .questions {
-  margin-top: 110px;
+  margin-top: 90px;
   border-radius: 8px;
   padding: 10px;
 }
@@ -256,8 +272,6 @@ option {
 .questions-buttons:active {
   box-shadow: none;
 }
-
-
 
 .question-form {
   margin: 0;
@@ -377,14 +391,10 @@ option {
 .comprehension-questions {
   border-radius: 8px;
   font-weight: lighter;
-  color: #d9c282;
-  font-size: 1.5em;
-  text-shadow: none;
-  color: #d9c282;
-  background-color: black;
+  font-size: 1.7em;
   padding: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 div textarea {
