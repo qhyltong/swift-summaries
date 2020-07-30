@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import spinner from './swinging.gif';
 
 function Questions(props) {
 
@@ -9,6 +10,9 @@ function Questions(props) {
   function questionChange(event, questionChoice) {
     event.preventDefault();
     chooseQuestion(questionChoice);
+    props.changeLoadingStatus(true);
+    /*TODO add a .then that says props.changeLoadingStatus(false)*/
+
   }
 
   function handleChange(event) {
@@ -17,13 +21,41 @@ function Questions(props) {
 
   function handleSubmit(event, questionText) {
     event.preventDefault();
-    chooseQuestion(questionText)
+    props.changeLoadingStatus(true);
+    chooseQuestion(questionText);
+
+    /*TODO add a .then that says props.changeLoadingStatus(false)*/
   }
 
-  if(question) {
+  if(props.isLoading) {
     return(
       <div className="questions">
-        <p className="comprehension-questions">Comprehension Questions</p>
+        <h2 className="comprehension-questions">Comprehension Questions</h2>
+        <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
+          <button
+            id="names-button"
+            className="question-buttons"
+            onClick={(event) => questionChange(event, "names")}>
+            What names are mentioned?
+          </button>
+          <button
+            id="locations-button"
+            className="question-buttons"
+            onClick={(event) => questionChange(event, "location")}>
+            What locations are mentioned?
+          </button><br/>
+          <input type="text" placeholder="Enter Question..." onChange={handleChange} id="question-box"/>
+          <input type="submit" value="Submit" id="question-submit"/>
+          <div id="qa-div">
+            <img id="qa-spinner" src={spinner} alt="loading" />
+          </div>
+        </form>
+      </div>
+    );
+  } else if(question) {
+    return(
+      <div className="questions">
+        <h2 className="comprehension-questions">Comprehension Questions</h2>
         <form onSubmit={(event) => handleSubmit(event, questionText)} className="question-form">
           <button
             id="names-button"

@@ -258,6 +258,17 @@ option {
   padding: 10px;
 }
 
+#qa-div {
+  text-align: center;
+  float: left;
+  margin-bottom: 50px;
+}
+
+#qa-spinner {
+  height: 30%;
+  width: 40%;
+}
+
 .question-buttons {
   margin: 10px;
   margin-left: 0;

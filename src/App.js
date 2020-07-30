@@ -12,14 +12,20 @@ class App extends React.Component {
     this.changeText = this.changeText.bind(this);
     this.changeSelection = this.changeSelection.bind(this);
     this.changeLoadingStatus = this.changeLoadingStatus.bind(this);
+    this.changeQALoadingStatus = this.changeQALoadingStatus.bind(this);
     this.state = {
       inputText: null,
       summarySize: 50,
       isLoading: false,
       keyPhraseOutput: null,
       keyPhraseItems: null,
-      rareWordsItems: null
+      rareWordsItems: null,
+      qaLoading: false
     }
+  }
+
+  changeQALoadingStatus(status) {
+    this.setState({qaLoading: status});
   }
 
   changeLoadingStatus(status) {
@@ -28,12 +34,6 @@ class App extends React.Component {
 
   changeText(text) {
     this.setState({inputText: text});
-
-    /* TODO */
-    /*add fetch call for both key phrase and rare words,
-      take fetch calls out of Keyphrases.js, have a .then */
-
-    /*.then(()=> this.setState({keyPhraseItems: [name_of_phrase_var], rareWordsItems: [name of rare word var]}))*/
   };
 
   changeSelection(size) {
@@ -51,7 +51,10 @@ class App extends React.Component {
               changeSelection={this.changeSelection}
               changeLoadingStatus={this.changeLoadingStatus}
             />
-            <Questions inputText={this.state.inputText} />
+          <Questions
+            changeLoadingStatus={this.changeQALoadingStatus}
+            inputText={this.state.inputText}
+            isLoading={this.state.qaLoading} />
           </div>
           <div className="right">
             <Output
