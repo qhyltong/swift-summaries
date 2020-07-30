@@ -1,12 +1,13 @@
 import React from 'react';
+import loader from './swinging.gif';
 import './App.css';
 
 function Output(props) {
 
   if(props.isLoading) {
     return(
-      <div className="output">
-        Loading...
+      <div className="loading-output">
+        <img className="spinner" src={loader} alt="loading..." />
       </div>
     );
   }

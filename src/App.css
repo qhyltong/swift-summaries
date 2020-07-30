@@ -2,7 +2,7 @@ body {
   background-color: #f7f1df;
 }
 
-img {
+.logo {
   height: 100%;
   width: 100%;
 }
@@ -118,6 +118,18 @@ p {
   border-radius: 8px;
   line-height: 1.6;
   border: 2px #d9c282 solid;
+}
+
+.loading-output {
+  height: 60vh;
+  margin-bottom: 160px;
+  text-align: center;
+}
+
+.spinner {
+  height: 40%;
+  width: 50%;
+  margin-top: 150px;
 }
 
 .drop-button {

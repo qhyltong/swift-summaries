@@ -6,7 +6,7 @@ function NavBar() {
   return(
     <div id="nav">
       <div id="img-div">
-        <img src={ss} alt="loading..." />
+        <img className="logo" src={ss} alt="loading..." />
       </div>
       <h1>Swift Summaries</h1>
       <span id="info-spot">
