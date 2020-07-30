@@ -13,12 +13,24 @@ function KeyPhrases(props) {
     event.preventDefault();
     changeSection(0);
   }
-  const keyPhrases = null;
+
+  let keyPhrases = null;
   if(props.keyOutput) {
     keyPhrases = props.keyOutput.map(
       (phrase) => (
         <li key={phrase}>
           {phrase}
+        </li>
+      )
+    );
+  }
+
+  let rareWords = null;
+  if(props.rareWords) {
+    rareWords = props.rareOutput.map(
+      (word) => (
+        <li key={word}>
+          {word}
         </li>
       )
     );
@@ -71,10 +83,7 @@ function KeyPhrases(props) {
           </a>
         </div>
         <ul className="phrase-list">
-          <li>{props.rareOutput}</li>
-          <li>Rare Word: definition 2</li>
-          <li>Rare Word: definition</li>
-          <li>Rare Word: definition</li>
+          {rareWords}
         </ul>
       </p>
     </div>
