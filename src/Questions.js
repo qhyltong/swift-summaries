@@ -4,36 +4,60 @@ import spinner from './swinging.gif';
 
 function Questions(props) {
 
-  const [question, chooseQuestion] = useState(null);
-  const [questionText, setText] = useState(null);
-  const [questionType, changeType] = useState(null);
+  const [question, setQuestion] = useState(null); //inputText from textBox
+  const [questionText, setText] = useState(null); //Handle Current Text
+  const [isNamesLocations, setType] = useState(true); //handles if it is names/locations or text
+  const [answer, changeAnswer] = useState(null); //Output from backend
 
-  /*Put this line here now*/
-  let namesLocations = null;
-  function questionChange(event, questionChoice) {
-    event.preventDefault();
-    chooseQuestion(questionChoice);
-    changeType("button");
 
-    /*After fetch add this and remove where I had it before*/
-    /*I also changed App.css a little and I added a className to the ol
-      element in the return statement */
-    namesLocations = question.map(
-      (cur) => (
-        <li key={cur}>{cur}</li>
-      )
-    );
+  const formattedAnswer = answer.map(
+    (cur) => (
+      <li key="cur">{cur}</li>
+    )
+  );
+
+/*
+ * This function is for handling the button clicks
+ */
+  function questionChange(questionChoice, event) {
+    event.persist();
+    props.changeLoadingStatus(true);
+    changeAnswer(null);
+    changeType(true);
+    //MAKE API CALL HERE
+    //Vars you might need:
+    //input text that they want summarized is props.inputText
+    //which button they pressed is questionChoice (either "names" or "locations")
+    //.thens needed (in this order)
+    // changeAnswer(output from backend)
+    // props.changeLoadingStatus(false)
+    //end of function
   }
 
   function handleChange(event) {
     setText(event.target.value);
   }
 
-  function handleSubmit(event, questionText) {
-    event.preventDefault();
+
+  /*
+   * This function is for handling text questions, you might have to add
+   * in event.persist(), but you'll have to add that
+   */
+  function handleSubmit(questionText, event) {
+    event.persist();
     props.changeLoadingStatus(true);
-    chooseQuestion(questionText);
-    changeType("text");
+    changeAnswer(null);
+    changeType(false);
+    setQuestion(questionText);
+    //MAKE API CALL HERE
+    //vars you might need:
+    //question is the question user asked
+    //props.inputText is the text they want summarized
+    //.thens needed (in this order)
+    //changeAnswer(output from the backend)
+    //props.changeLoadingStatus(false)
+    //setText(null)
+    //end of function
   }
 
   if(props.isLoading) {
@@ -61,11 +85,8 @@ function Questions(props) {
         </form>
       </div>
     );
-  } else if(question) {
-
-
-    /*Changed this if statement */
-    if(namesLocations !== null) {
+  } else if(answer) {
+    if(isNamesLocations) {
       return(
         <div className="questions">
           <h2 className="comprehension-questions">Comprehension Questions</h2>
@@ -88,7 +109,7 @@ function Questions(props) {
             <div id="answers">
               <p>
                 <ol className="phrase-list">
-                  {namesLocations}
+                  {formattedAnswer}
                 </ol>
               </p>
             </div>
@@ -118,7 +139,7 @@ function Questions(props) {
           <input type="submit" value="Submit" id="question-submit"/><br/>
           <h3>Answer</h3>
           <div id="answers">
-            <p>{question}</p>
+            <p>{answer}</p>
           </div>
         </form>
       </div>
