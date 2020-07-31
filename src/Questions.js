@@ -6,16 +6,23 @@ function Questions(props) {
 
   const [question, chooseQuestion] = useState(null);
   const [questionText, setText] = useState(null);
-  /*Added new stare var here */
   const [questionType, changeType] = useState(null);
 
+  /*Put this line here now*/
+  let namesLocations = null;
   function questionChange(event, questionChoice) {
     event.preventDefault();
     chooseQuestion(questionChoice);
-    props.changeLoadingStatus(true);
-
-    /*Added this line*/
     changeType("button");
+
+    /*After fetch add this and remove where I had it before*/
+    /*I also changed App.css a little and I added a className to the ol
+      element in the return statement */
+    namesLocations = question.map(
+      (cur) => (
+        <li key={cur}>{cur}</li>
+      )
+    );
   }
 
   function handleChange(event) {
@@ -26,20 +33,7 @@ function Questions(props) {
     event.preventDefault();
     props.changeLoadingStatus(true);
     chooseQuestion(questionText);
-
-    /*Added this line */
     changeType("text");
-  }
-
-  /* Added in lines below*/
-  let namesLocations = null;
-
-  if(question && questionType === "button") {
-    namesLocations = question.map(
-      (cur) => (
-        <li key={cur}>{cur}</li>
-      )
-    );
   }
 
   if(props.isLoading) {
@@ -70,8 +64,8 @@ function Questions(props) {
   } else if(question) {
 
 
-    /*Added this new return statement */
-    if(questionType === "button") {
+    /*Changed this if statement */
+    if(namesLocations !== null) {
       return(
         <div className="questions">
           <h2 className="comprehension-questions">Comprehension Questions</h2>
@@ -93,7 +87,7 @@ function Questions(props) {
             <h3>Answer</h3>
             <div id="answers">
               <p>
-                <ol>
+                <ol className="phrase-list">
                   {namesLocations}
                 </ol>
               </p>
