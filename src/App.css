@@ -434,3 +434,16 @@ div textarea {
   width: 95%;
   line-height: 1.6;
 }
+
+@media only screen and (max-width: 500px){
+  .right {
+    display: block;
+    float: left;
+    width: 90%;
+  }
+
+  .left {
+    display: block;
+    width: 90%;
+  }
+}
